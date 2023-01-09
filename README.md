@@ -1,11 +1,11 @@
 # Curso Python de Coderhouse: Projecto Final (Primera Entrega)
-Web estilo e-commerce hecha por Ezequiel Rodríguez. 
+Web e-commerce hecha por Ezequiel Rodríguez. 
 - Se muestran todos los productos por defecto y el usuario puede filtrar por categoria.
 - El usuario puede agregar productos en /agregar_producto
 
 # Detalles
 /apps:
-a- core
+- core
 
 core.models:
 - Category

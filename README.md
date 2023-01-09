@@ -5,7 +5,7 @@ Web estilo e-commerce hecha por Ezequiel Rodríguez.
 
 # Detalles
 /apps:
-- core
+a- core
 
 core.models:
 - Category

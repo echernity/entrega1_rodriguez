@@ -1,0 +1,10 @@
+{% extends 'core/main.html' %}
+{% block product_form %}
+<div class="product_form">
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Cargar"/>
+    </form>
+</div>
+{% endblock %}

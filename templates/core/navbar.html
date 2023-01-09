@@ -1,0 +1,9 @@
+<div class="navbar">
+    <a href="{% url 'main' %}">Inicio |</a>
+    {% for category in categories %}
+    <a href="{% url 'main' %}?search={{category.name.lower}}"> {{category.name}} |</a>
+    {% endfor %}
+    <a href="{% url 'product-form' %}"> Agregar Producto</a>
+    <hr>
+    <p>Productos Listados: {{products_count}}</p>
+</div>

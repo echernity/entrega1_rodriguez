@@ -1,0 +1,15 @@
+{% load static %}
+<div class="products-container">
+    {% for product in products %}
+        <div class="product-container">
+            <img src="{% static '/images/product_image.jpg' %}" class="product-img">
+            <div class="card-body">
+                <h2 class="card-title">{{product.name}}</h2>
+                <small class="category">Categoria: {{product.category}}</small>
+                <p class="description-container">{{product.description}}</p>
+                <h3 class="product-price">$ {{product.price}}</h3>
+                <input type="button" value="Agregar al Carrito">
+            </div>
+        </div>
+    {% endfor %}
+</div>

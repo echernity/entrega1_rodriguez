@@ -24,5 +24,7 @@ class Product(models.Model):
     def __str__(self):
         return str(self.name)
 
-class Order(models.Model):
-    pass
+class Advertisement(models.Model):
+    name = models.CharField(max_length=30)
+    img = models.ImageField(upload_to="images/ads")
+    

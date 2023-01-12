@@ -10,12 +10,12 @@ Web e-commerce hecha por Ezequiel Rodríguez.
 core.models:
 - Category
 - Product
-- Order
+- Advertisement
 
 core.views:
 - main
 - product
-- add_product
+- create_product
 
 core.forms:
 - ProductForm

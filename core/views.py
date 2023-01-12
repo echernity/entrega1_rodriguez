@@ -1,19 +1,20 @@
 from django.shortcuts import render, redirect
-from core.models import Product, Category
+from core.models import Product, Category, Advertisement
 from django.db.models import Q
 from core.forms import ProductForm
 
 def main(request):
-    cat_search = request.GET.get('search') if request.GET.get('search') != None else ''
+    category_search = request.GET.get('search') if request.GET.get('search') != None else ''
     
-    if cat_search != '':
-        products = Product.objects.filter(Q(category__name__icontains=cat_search))
+    if category_search != '':
+        products = Product.objects.filter(Q(category__name__icontains=category_search))
     else:
         products = Product.objects.all()
     
     categories = Category.objects.all()
+    ads = Advertisement.objects.all()
     products_count = products.count()
-    context = {'categories': categories, 'products': products, 'products_count': products_count}
+    context = {'categories': categories, 'products': products, 'products_count': products_count, 'ads': ads}
     return render(request, 'core/main.html', context)
 
 def product(request, pk):

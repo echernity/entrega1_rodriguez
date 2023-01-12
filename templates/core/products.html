@@ -4,11 +4,11 @@
         <div class="product-container">
             <img src="{% static '/images/product_image.jpg' %}" class="product-img">
             <div class="card-body">
-                <a href="#" class="card-title">{{product.name}}</a>
-                <h3 class="product-price">$ {{product.price}}</h3>
-                <small class="category">Categoria: {{product.category}}</small>
+                <a href="#" class="product-title">{{product.name}}</a>
+                <h2 class="product-price">$ {{product.price}}</h2>
+                {% comment %} <small class="category">Categoria: {{product.category}}</small> {% endcomment %}
                 <p class="description-container">{{product.description}}</p>
-                <input type="button" value="Agregar al Carrito">
+                <input type="button" value="Agregar al Carrito" class="button-add-chart">
             </div>
         </div>
     {% endfor %}

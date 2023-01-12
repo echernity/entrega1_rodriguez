@@ -18,7 +18,7 @@ def main(request):
 
 def product(request, pk):
     product = Product.objects.get(id=pk)
-    name = product.name()  # type: ignore    
+    name = product.name() # type: ignore
     category = product.category() # type: ignore   
     description = product.description() # type: ignore
     price = product.price() # type: ignore   
@@ -26,7 +26,7 @@ def product(request, pk):
     context = {'name': name, 'category': category, 'description': description, 'price': price, 'date': date}     
     return render(request, 'core/product.html', context)
 
-def add_product(request):
+def create_product(request):
     form = ProductForm()
     
     if request.method == 'POST':

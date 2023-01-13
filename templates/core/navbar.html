@@ -3,7 +3,12 @@
     {% for category in categories %}
     <a href="{% url 'main' %}?search={{category.name.lower}}"> {{category.name}} |</a>
     {% endfor %}
-    <a href="{% url 'product-form' %}"> Agregar Producto</a>
+    <a href="{% url 'product-form' %}"> Agregar Producto </a>
+    <div>
+        <a href="{% url 'login' %}"> Login </a>
+        <a href="{% url 'logout' %}"> Logout </a>
+
+    </div>
     <hr>
     <p>Productos Listados: {{products_count}}</p>
 </div>

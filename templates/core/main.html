@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHOP ONLINE</title>
+    <title>MARCA {% block title %}{% endblock %}</title>
 </head>
 
 <style>
@@ -76,9 +76,16 @@
 
     {% include 'core/navbar.html' %}
     {% include 'core/home.html' %}
+    
 
     {% if 'agregar_producto' in request.path %}
     {% block product_form %}
+    {% endblock %}
+    {% elif 'login' in request.path %}
+    {% block login %}
+    {% endblock %}
+    {% elif 'logout' in request.path %}
+    {% block logout %}
     {% endblock %}
     {% endif %}
 

@@ -39,3 +39,9 @@ def create_product(request):
         
     context = {'form': form}
     return render(request, "core/product_form.html", context)
+
+def edit_product(request, pk):
+    form = ProductForm()
+    
+    # if request.method == 'GET':
+        
